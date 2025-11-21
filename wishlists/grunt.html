@@ -1,2 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Liste de Cadeaux</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .table-wrapper {
+            padding: 40px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 18px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1em;
+        }
+
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9ff;
+            transform: scale(1.01);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .price {
+            color: #667eea;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .link-cell {
+            word-break: break-all;
+        }
+
+        .link-cell a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .link-cell a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .no-link {
+            color: #999;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+            background: #f8f9fa;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .table-wrapper {
+                padding: 20px;
+            }
+
+            th, td {
+                padding: 12px 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
 <a href=/index.html>Home</a>
 <a href=/wishlists/list.html>Wishlists</a>
+
+    <div class="container">
+        <header>
+            <h1>🎁 Ma Liste de Cadeaux</h1>
+            <p class="subtitle">Les choses que j'aimerais recevoir</p>
+        </header>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Article</th>
+                        <th>Prix</th>
+                        <th>Lien</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-name">Trench coat</td>
+                        <td class="price">—</td>
+                        <td class="link-cell"><span class="no-link">Pas de lien</span></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Carlos Santos chaussures noires</td>
+                        <td class="price">—</td>
+                        <td class="link-cell">
+                            <a href="https://www.santosshoes.com/en/shoes-for-man/lace-up-shoes/one-cut-shoes-for-men/william-6903"
+                               target="_blank">https://www.santosshoes.com/en/shoes-for-man/lace-up-shoes/one-cut-shoes-for-men/william-6903</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Sigma 000M-15</td>
+                        <td class="price">180€</td>
+                        <td class="link-cell">
+                            <a href="https://www.leboncoin.fr/ad/instruments_de_musique/3088266539"
+                               target="_blank">https://www.leboncoin.fr/ad/instruments_de_musique/3088266539</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Cordes electric Savarez Focus 10-52</td>
+                        <td class="price">7,35€</td>
+                        <td class="link-cell">
+                            <a href="https://www.amazon.fr/Savarez-%C3%A9lectrique-Stainless-Med-Light-010-052/dp/B08WLZT6KK/ref=sr_1_4?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-4"
+                               target="_blank">https://www.amazon.fr/Savarez-électrique-Stainless-Med-Light-010-052/dp/B08WLZT6KK</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">4 ou moins Carte MicroSDXC Samsung Pro Plus - 512 Go</td>
+                        <td class="price">38,30€</td>
+                        <td class="link-cell">
+                            <a href="https://www.amazon.de/dp/B0BYPBY2JT"
+                               target="_blank">https://www.amazon.de/dp/B0BYPBY2JT</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">4 ou moins iFlash-Quad</td>
+                        <td class="price">50,40€</td>
+                        <td class="link-cell">
+                            <a href="https://www.iflash.xyz/store/iflash-quad/"
+                               target="_blank">https://www.iflash.xyz/store/iflash-quad/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Ampli Marshall 2525H (sinon 2525C) d'occasion</td>
+                        <td class="price">600€</td>
+                        <td class="link-cell"><span class="no-link">Pas de lien</span></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">Boss EQ-200</td>
+                        <td class="price">200€ ou -</td>
+                        <td class="link-cell"><span class="no-link">Pas de lien</span></td>
+                    </tr>
+                    <tr>
+                        <td class="item-name">BARBANERA Low Pass Filter</td>
+                        <td class="price">305,90€</td>
+                        <td class="link-cell">
+                            <a href="https://triungulolab.com/products/barbanera-low-pass-filter"
+                               target="_blank">https://triungulolab.com/products/barbanera-low-pass-filter</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <p>💜 Merci d'avoir consulté ma liste !</p>
+        </footer>
+    </div>
+</body>
+</html>
